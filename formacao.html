@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formação - Thailinni Ferreira</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f2f7;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #c5b4e3;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      margin: 2rem auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 800px;
+    }
+
+    .btn {
+      background-color: #d2c0f2;
+      color: #333;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #baa6e0;
+    }
+
+    .container {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .box {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      width: 80%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .topo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #d2c0f2;
+      color: #333;
+      padding: 10px 15px;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .topo:hover {
+      background-color: #baa6e0;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Formação Educacional</h1>
+  </header>
+
+  <nav>
+    <button class="btn" onclick="scrollToId('formacao')">Formação Superior</button>
+    <button class="btn" onclick="scrollToId('pos')">Pós-graduações</button>
+    <button class="btn" onclick="scrollToId('cursos')">Cursos Complementares</button>
+    <button class="btn" onclick="scrollToId('idiomas')">Idiomas e Tecnologias</button>
+    <a href="/meu-site/index.html" class="btn">Voltar</a>
+  </nav>
+
+  <div class="container">
+    <section id="formacao" class="box">
+      <h2>Formação Superior</h2>
+      <ul>
+        <li>Graduação em Enfermagem – Faculdade de Santa Catarina (2018 - 2021)</li>
+        <li>Mestrado em Enfermagem com especialidade em Gestão Sanitária – Uneatlantico (2023 - 2025)</li>
+        <li>Faculdade de Análise e Desenvolvimento de Sistemas – Faculdade Uninter (Início em fevereiro de 2025)</li>
+      </ul>
+    </section>
+
+    <section id="pos" class="box">
+      <h2>Pós-graduações</h2>
+      <ul>
+        <li>Gestão em Saúde e Enfermagem do Trabalho – União das Américas Descomplica (2022 - 2023)</li>
+        <li>Auditoria em Serviços de Saúde e Atenção Primária com Ênfase na Estratégia Saúde da Família – Faculdade Holística (2023)</li>
+        <li>Gestão de Saúde Suplementar e Gestão da Qualidade em Saúde e Acreditação Hospitalar – Faculeste (2023 - 2024)</li>
+      </ul>
+    </section>
+
+    <section id="cursos" class="box">
+      <h2>Cursos Complementares</h2>
+      <ul>
+        <li>Atualização em Controle das IH em Pacientes Cirúrgicos</li>
+        <li>Cuidados ao Paciente Cirúrgico</li>
+        <li>Cobertura e Tratamento de Feridas</li>
+        <li>Epidemiologia</li>
+        <li>Enfermeiro e a Gestão Hospitalar</li>
+        <li>Infecção Hospitalar</li>
+        <li>Instrumentação Cirúrgica</li>
+        <li>Primeiros Socorros</li>
+        <li>Saúde da Mulher</li>
+        <li>Urgência e Emergência</li>
+      </ul>
+    </section>
+
+    <section id="idiomas" class="box">
+      <h2>Idiomas e Tecnologias</h2>
+      <ul>
+        <li>Inglês básico</li>
+        <li>Informática avançada (Word, Excel, PowerPoint, Photoshop, Canva, Premiere)</li>
+        <li>Conhecimentos básicos em programação com foco em JavaScript</li>
+        <li>Domínio de ferramentas Google e plataformas digitais</li>
+      </ul>
+    </section>
+  </div>
+
+  <button class="topo" onclick="scrollToTop()">↑ Topo</button>
+
+  <script>
+    // Rola suavemente até a seção com o ID especificado
+    function scrollToId(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Volta ao topo da página
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
