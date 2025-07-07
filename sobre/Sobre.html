@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre - Thailinni Ferreira</title>
+  <style>
+    /* Estilo global */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f2f7;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Cabeçalho da página */
+    header {
+      background-color: #c5b4e3;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    /* Botões de navegação */
+    nav {
+      margin: 2rem auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      background-color: #d2c0f2;
+      color: #333;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #baa6e0;
+    }
+
+    /* Conteúdo principal */
+    .container {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .box {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      width: 80%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .box:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Imagens dos gatos */
+    .gato {
+      width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gato:hover {
+      transform: scale(1.05);
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .foto-box {
+      text-align: center;
+    }
+
+    /* Botão flutuante para voltar ao topo */
+    .topo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #d2c0f2;
+      color: #333;
+      padding: 10px 15px;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .topo:hover {
+      background-color: #baa6e0;
+      transform: scale(1.05);
+    }
+
+    .foto-eu {
+      width: 180px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho da página -->
+  <header>
+    <h1>Sobre Thailinni Ferreira</h1>
+  </header>
+
+  <!-- Navegação interna -->
+  <nav>
+    <button class="btn" onclick="scrollToId('apresentacao')">Apresentação</button>
+    <button class="btn" onclick="scrollToId('familia')">Família</button>
+    <a href="../index.html" class="btn">Voltar</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- Seção de apresentação -->
+    <section id="apresentacao" class="box">
+      <img src="eu.jpg" alt="Thailinni Ferreira" class="foto-eu">
+      <h2>Apresentação</h2>
+      <p>Olá! Meu nome é <strong>Thailinni Ferreira de Souza</strong>, nascida em 02 de janeiro de 2000, capricorniana e flamenguista com muito orgulho! Me formei em Enfermagem no final de 2021, profissão que exerço com amor e dedicação. Atualmente trabalho como enfermeira de risco em uma empresa de planos de saúde de São Paulo, no modelo home office, enquanto moro em São José, Santa Catarina.</p>
+      <p>Apesar da minha paixão pela área da saúde, a tecnologia sempre brilhou aos meus olhos, e este ano decidi iniciar uma nova jornada: comecei a estudar Análise e Desenvolvimento de Sistemas. Essa transição tem sido empolgante e desafiadora!</p>
+      <p>No final de 2024, fui pedida em noivado (21/12/2024) e estou contando os dias para meu casamento em outubro de 2026. A cor que mais amo é lilás, e ela está em muitos detalhes do meu dia a dia e neste site.</p>
+    </section>
+
+    <!-- Seção da família -->
+    <section id="familia" class="box">
+      <h2>Minha Família</h2>
+      <p>Moro com meu noivo e nossos três "filhos" peludos: os gatos Aladim, Jasmin e Lovy. Cada um tem sua própria personalidade e preenche nosso lar de alegria!</p>
+      <div class="galeria">
+        <div class="foto-box">
+          <img src="aladim.jpg" alt="Aladim" class="gato">
+          <p><strong>Aladim</strong> – O terror dos gatos</p>
+        </div>
+        <div class="foto-box">
+          <img src="jasmin.jpg" alt="Jasmin" class="gato">
+          <p><strong>Jasmin</strong> – Deveria se chamar Bela Adormecida</p>
+        </div>
+        <div class="foto-box">
+          <img src="lovy.jpg" alt="Lovy" class="gato">
+          <p><strong>Lovy</strong> – De amor só tem o nome</p>
+        </div>
+        <div class="foto-box">
+          <img src="noivado.jpg" alt="Noivado" class="gato">
+          <p><strong>Nosso Noivado</strong> – 21/12/2024</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Botão para voltar ao topo -->
+  <button class="topo" onclick="scrollToTop()">↑ Topo</button>
+
+  <script>
+    // Rola suavemente até o ID da seção
+    function scrollToId(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Volta ao topo da página com efeito suave
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

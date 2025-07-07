@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> <!-- Suporta caracteres especiais e acentuação -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva -->
+  <title>Portfólio - Thailinni Ferreira</title>
+
+  <style>
+    /* Estilo Total da página */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f2f7; /* Cor lilás clara de fundo */
+      margin: 0;
+      padding: 0;
+      color: #333; /* Cor principal do texto */
+    }
+
+    /* Cabeçalho superior */
+    header {
+      background-color: #c5b4e3; /* Lilás pastel */
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* Conteúdo principal centralizado */
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+
+    /* Título da seção */
+    h2 {
+      text-align: center;
+      color: #5d3f6a; /* Roxo escuro */
+      margin-bottom: 1.5rem;
+    }
+
+    /* Texto introdutório */
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* Área onde será exibido o diploma em PDF */
+    .diploma {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    /* Exibição do PDF embutido */
+    .diploma iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    /* Estilo do botão de voltar */
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background-color: #d2c0f2;
+      color: #333;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #baa6e0; /* Cor ao passar o mouse */
+    }
+
+    /* Botão flutuante para voltar ao topo */
+    .topo {
+      position: fixed; /* Fica visível mesmo rolando a página */
+      bottom: 20px;
+      right: 20px;
+      background-color: #d2c0f2;
+      color: #333;
+      padding: 10px 15px;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .topo:hover {
+      background-color: #baa6e0;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Cabeçalho da página -->
+  <header>
+    <h1>Portfólio</h1>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <h2>Meus Trabalhos</h2>
+    <p>Atualmente estou em transição de carreira, iniciando minha jornada na área de tecnologia. Enquanto não tenho projetos de desenvolvimento para apresentar, compartilho com orgulho um marco importante da minha formação: meu diploma de Bacharela em Enfermagem.</p>
+
+    <!-- Exibição do PDF do diploma -->
+    <div class="diploma">
+      <h3>Diploma de Enfermagem</h3>
+      <iframe src="Diploma-FASC.pdf" title="Diploma de Enfermagem"></iframe>
+    </div>
+
+    <!-- Botão de voltar para a página inicial -->
+    <div style="text-align:center;">
+      <a href="../index.html" class="btn">Voltar à Página Inicial</a>
+    </div>
+  </main>
+
+  <!-- Botão fixo para rolar até o topo -->
+  <button class="topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑ Topo</button>
+</body>
+</html>

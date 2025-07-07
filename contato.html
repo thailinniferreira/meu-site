@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" /> <!-- Suporta acentuação e caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o layout responsivo -->
+  <title>Contato - Thailinni Ferreira</title>
+
+  <style>
+    /* Estilo Total da página */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f2f7; /* Fundo lilás claro */
+      margin: 0;
+      padding: 0;
+      color: #333; /* Cor principal do texto */
+    }
+
+    /* Cabeçalho da página */
+    header {
+      background-color: #c5b4e3; /* Cor roxa pastel */
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* Container central do conteúdo */
+    .container {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Estilização dos rótulos */
+    label {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    /* Campos de entrada e texto */
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    /* Botão de envio */
+    button {
+      background-color: #d2c0f2;
+      color: #333;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #baa6e0; /* Efeito ao passar o mouse */
+    }
+
+    /* Informações de contato fixas */
+    .info {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Botão de voltar */
+    .voltar {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .voltar a {
+      background-color: #caa6d4;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .voltar a:hover {
+      background-color: #b68cc1;
+    }
+
+    /* Estilo da mensagem de sucesso */
+    .success-message {
+      background-color: #d6f5d6;
+      border: 1px solid #8fd18f;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #356b35;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Cabeçalho da página -->
+  <header>
+    <h1>Entre em Contato</h1>
+  </header>
+
+  <div class="container">
+    <!-- MENSAGEM DE SUCESSO (exibida com JavaScript ao retornar do FormSubmit) -->
+    <div id="success" class="success-message" style="display: none;">
+      Mensagem enviada com sucesso! Obrigada pelo contato.
+    </div>
+
+    <!-- Formulário de envio usando FormSubmit -->
+    <h2>Formulário de Contato</h2>
+    <form action="https://formsubmit.co/thailinniferreira048@gmail.com" method="POST">
+      <!-- Campos ocultos para configuração do envio -->
+      <input type="hidden" name="_subject" value="Nova mensagem do site">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_next" value="http://127.0.0.1:5500/contato.html?sucesso=true">
+      <!-- ↑ Troque esse link pelo endereço final do seu site (local ou publicado) -->
+
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Informações adicionais de contato -->
+    <div class="info">
+      <h3>Informações de Contato</h3>
+      <p><strong>Telefone:</strong> (48) 99178-5848</p>
+      <p><strong>Email:</strong> thailinniferreira048@gmail.com</p>
+      <p><strong>Cidade:</strong> São José - SC</p>
+    </div>
+
+    <!-- Link para voltar à página inicial -->
+    <div class="voltar">
+      <a href="../index.html">Voltar para a página inicial</a>
+    </div>
+  </div>
+
+  <!-- Script que mostra a mensagem se a URL tiver sucesso -->
+  <script>
+    // Verifica se a URL contém ?sucesso=true
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('sucesso') === 'true') {
+      document.getElementById('success').style.display = 'block'; // Exibe mensagem
+    }
+  </script>
+</body>
+</html>
